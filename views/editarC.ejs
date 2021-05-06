@@ -1,0 +1,57 @@
+<% include partials/head %>
+    <% include partials/navbar %>
+        <style>
+            body {
+                background-image: linear-gradient(-200deg, rgb(11, 119, 138) 60%, white 60%);
+            }
+        </style> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    
+                </div>
+                <div class="col-sm" style="background: darkgrey; border-radius: 15px;">
+                    <form action="/edit/<%= Curso._id %>" method="post">
+                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" value="<%= Curso.Nombre %>">
+                        <label for="message-text" class="col-form-label">Descripción:</label>
+                        <textarea class="form-control" id="Descripcion" name="Descripcion"
+                            value="Descripcion"><%= Curso.Descripcion %></textarea>
+                            <label for="recipient-name" class="col-form-label">Agregar
+                                Imagen:</label>
+                            <select class="form-select form-select-sm"
+                                aria-label=".form-select-sm example" name="Imagen">
+                                <option selected>Seleccionar Imagen</option>
+                                <option value="electricidad.webp">Electricidad</option>
+                                <option value="Programacion.webp">Programación</option>
+                                <option value="soporte.webp">Soporte y Mantenimineto</option>
+                            </select>
+                        <div><br>
+                            <div class="container">
+                                <div class="row">
+                                  <div class="col-sm">
+                                   
+                                  </div>
+                                  <div class="col-sm">
+                                    <button class="btn btn-primary" type="submit">
+                                        Actualizar
+                                    </button><br>
+                                  </div>
+                                  <div class="col-sm">
+                                   <br>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <br>
+                    </form>
+
+                </div>
+                <div class="col-sm">
+                   
+                </div>
+            </div>
+        </div><br>
+
+
+        <% include partials/footer %>
